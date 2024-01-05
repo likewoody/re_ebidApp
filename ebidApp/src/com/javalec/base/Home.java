@@ -196,8 +196,10 @@ public class Home extends JDialog {
 	// ---- Fucntion ----
 	
 	private void tableInit() {
+		
 		Dao_Home dao = new Dao_Home();
 		DefaultTableModel outerTable = new DefaultTableModel() {
+			
 
 			@Override
 			public boolean isCellEditable(int row, int column) {
@@ -205,6 +207,7 @@ public class Home extends JDialog {
 			}
 			
 		};
+		
 		
 		// Add Column
 		outerTable.addColumn("No");	
@@ -223,7 +226,7 @@ public class Home extends JDialog {
 		innerTable.setRowHeight(50);
 		innerTable.getTableHeader().setReorderingAllowed(false);
 		innerTable.getColumnModel().getColumn(1).setCellRenderer(new ImageRender());;
-		
+			
 	}
 	
 	private class ImageRender extends DefaultTableCellRenderer {
